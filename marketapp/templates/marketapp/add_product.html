@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Info about product{% endblock %}
+
+{% block products_info %}
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form.as_p}}
+                            <button type="submit" class="btn btn-primary text-uppercase">Добавить</button>
+                        </form>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                    <!-- Pager-->
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="{% url 'market:index' %}">Отмена</a></div>
+                </div>
+            </div>
+{% endblock %}
