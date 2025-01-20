@@ -77,12 +77,12 @@ TEMPLATES = [
 WSGI_APPLICATION = 'M_Network.wsgi.application'
 
 # Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-db_name = 'railway'
-db_user = 'postgres'
-db_pswrd = 'DkVhPXenoS2GEE66Lqpg'
-db_host = 'containers-us-west-166.railway.app'
-db_port = '7824'
+# postgresql://user:password@db:5432/mydatabase
+db_name = 'mydatabase'
+db_user = 'user'
+db_pswrd = 'password'
+db_host = 'db'
+db_port = '5432'
 
 DATABASES = {
      'default': {
