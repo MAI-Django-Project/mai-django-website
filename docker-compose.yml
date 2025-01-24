@@ -16,8 +16,6 @@ services:
       - DJANGO_SETTINGS_MODULE=M_Network.settings
     depends_on:
       - db
-    volumes:
-      - repositories:/app/storage
     ports:
       - "8000:8000"
     stdin_open: true
@@ -35,5 +33,3 @@ services:
 volumes:
   postgres_data:
   
-  repositories:
-    driver: local
